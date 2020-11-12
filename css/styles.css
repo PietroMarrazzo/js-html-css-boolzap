@@ -45,6 +45,9 @@ body {
     justify-content: space-between;
 }
 
+.space-around {
+    justify-content: space-around;
+}
 
 /* position uti */
 .p-relative {
@@ -62,6 +65,10 @@ body {
 
 .medium {
     font-weight: 500;
+}
+
+.opacity-04 {
+    opacity: .4;
 }
 
 /* APP BOX */
@@ -210,6 +217,7 @@ body {
 .chat-container .header-chat {
     height: 70px;
     background-color: #ededed;
+    border-left: 1px solid rgb(200, 200, 200);
 }
 
 .chat-container .header-chat .chat-opt i {
@@ -236,4 +244,20 @@ body {
 /* footer chat */
 .chat-container .footer-chat {
     height: 70px;
+    background-color: #faf4ee;
+    border-left: 1px solid rgb(200, 200, 200);
+}
+
+.chat-container .footer-chat i{
+    font-size: 22px;
+    opacity: .4;
+}
+
+.chat-container .footer-chat input {
+    background-color: white;
+    width: 70%;
+    height: 50px;
+    padding-left: 30px;
+    border-radius: 5px;
+    border: none;
 }

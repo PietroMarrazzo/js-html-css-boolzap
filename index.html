@@ -48,6 +48,7 @@
                     <li v-for="friends in contacts" class="contact p-flex align-center">
                         <img v-bind:src="'./img/avatar' + friends.avatar + '.jpg'" alt="">
                         <p class="medium">{{friends.name}}</p>
+                        <p></p>
                     </li>
                 </ul>
             </div>
@@ -60,7 +61,11 @@
                 <div class="active p-flex flex-centered">
                     <!-- da rendere switchabile con vue -->
                     <img src="./img/avatar_1.jpg" alt="avatar">
-                    <p class="medium">Michele</p>
+                    <div>
+                        <p class="medium">Michele</p>
+                        <p class="medium opacity-04">Ultimo accesso oggi alle 11:05</p>
+                    </div>
+                    
                 </div>
                 <div class="chat-opt p-flex flex-centered">
                     <i class="fas fa-search"></i>
@@ -73,8 +78,10 @@
 
             </div>
             <!-- footer chat -->
-            <div class="footer-chat">
-                
+            <div class="footer-chat p-flex space-around flex-centered">
+                <i class="far fa-smile"></i>
+                <input type="text" placeholder="Scrivi un messaggio">
+                <i class="fas fa-microphone"></i>
             </div>
         </div>
     </div>
