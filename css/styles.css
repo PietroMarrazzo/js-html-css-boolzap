@@ -179,6 +179,11 @@ body {
     padding: 10px 0px;
 }
 
+.sidebar .contact-list .contact:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
 .sidebar .contact-list .contact:last-child {
     border: none;
 }
@@ -195,6 +200,7 @@ body {
     flex-basis: 70%; 
 }
 
+/* header */
 .chat-container img {
     height: 55px;
     border-radius: 50%;
@@ -218,4 +224,16 @@ body {
 
 .chat-container .header-chat .chat-opt i:hover {
     cursor: pointer;
+}
+
+/* main box */
+.chat-container .main-chat {
+    flex-grow: 1;
+    background-image: url(../img/mine.jpg);
+    overflow-y: auto;
+}
+
+/* footer chat */
+.chat-container .footer-chat {
+    height: 70px;
 }
