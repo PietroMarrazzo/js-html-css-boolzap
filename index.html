@@ -20,8 +20,7 @@
             <!-- user loged -->
             <div class="userbox p-flex">
                <div class="user-info p-flex flex-centered">
-                   {{user.avatar}}
-                    <img src="./img/avatar'user.avatar'.jpg" alt="avatar">
+                    <img v-bind:src="'./img/avatar' + user.avatar +'.jpg'" alt="avatar">
                     <p>{{user.name}}</p>
                </div>
                <div class="user-opt">
