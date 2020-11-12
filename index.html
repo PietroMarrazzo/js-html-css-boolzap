@@ -54,12 +54,18 @@
         </div>
 
         <!-- chat box -->
-        <div class="chat-container">
+        <div class="chat-container p-flex flex-col">
             <!-- chat header -->
-            <div class="header-chat">
-                <div class="contact-selected p-flex flex-centered">
-                    <img v-bind:src="'./img/avatar' + user.avatar +'.jpg'" alt="avatar">
-                    <p class="medium">{{user.name}}</p>
+            <div class="header-chat p-flex space-between">
+                <div class="active p-flex flex-centered">
+                    <!-- da rendere switchabile con vue -->
+                    <img src="./img/avatar_1.jpg" alt="avatar">
+                    <p class="medium">Michele</p>
+                </div>
+                <div class="chat-opt p-flex flex-centered">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
             <!-- mex box -->

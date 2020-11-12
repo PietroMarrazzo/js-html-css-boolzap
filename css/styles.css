@@ -98,6 +98,7 @@ body {
 .sidebar .user-opt i {
     color: #919191;
     padding: 0px 10px;
+    font-size: 20px;
 }
 
 .sidebar .user-opt i:last-child {
@@ -190,3 +191,31 @@ body {
 
 
 /* CHAT BOX */
+.chat-container {
+    flex-basis: 70%; 
+}
+
+.chat-container img {
+    height: 55px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.chat-container .header-chat {
+    height: 70px;
+    background-color: #ededed;
+}
+
+.chat-container .header-chat .chat-opt i {
+    color: #919191;
+    padding: 0px 10px;
+    font-size: 20px;
+}
+
+.chat-container .header-chat .chat-opt i:last-child {
+    padding-right: 30px;
+}
+
+.chat-container .header-chat .chat-opt i:hover {
+    cursor: pointer;
+}
