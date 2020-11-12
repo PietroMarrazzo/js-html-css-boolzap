@@ -13,13 +13,15 @@ body {
         #009688 0%,
         #009688 15%,
         #d9dbd6 15%,
-        #d9dbd6 100%
+        #d9dbd6 40%,
+        rgba(219,219,211,1) 40%,
+        rgba(203,225,227,1) 100%
     );
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
 }
 
 * p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* UTILITIES */
@@ -138,7 +140,9 @@ body {
 }
 
 .sidebar .notifications p.styled {
-    opacity: .5;
+    padding-top: 5px;
+    font-size: 12px;
+    opacity: .6;
     text-decoration: underline;
 }
 
@@ -220,6 +224,16 @@ body {
     border-left: 1px solid rgb(200, 200, 200);
 }
 
+.chat-container .header-chat p {
+    margin-left: 15px;
+    padding: 1px;
+}
+
+.chat-container .header-chat p:last-child {
+    font-size: 12px;
+    font-weight: 500;
+}
+
 .chat-container .header-chat .chat-opt i {
     color: #919191;
     padding: 0px 10px;
@@ -253,6 +267,11 @@ body {
     opacity: .4;
 }
 
+.chat-container .footer-chat i:hover{
+    cursor: pointer;
+}
+
+
 .chat-container .footer-chat input {
     background-color: white;
     width: 70%;
@@ -260,4 +279,8 @@ body {
     padding-left: 30px;
     border-radius: 5px;
     border: none;
+}
+
+.chat-container .footer-chat input::placeholder {
+    opacity: .4;
 }
