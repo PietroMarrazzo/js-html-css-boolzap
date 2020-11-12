@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #009688 0%,
+        #009688 15%,
+        #d9dbd6 15%,
+        #d9dbd6 100%
+    );
+}
+
+
+/* UTILITIES */
+.p-flex {
+    display: flex;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+/* background */
+
+/* sidebar */
+
+
+
+/*  */
