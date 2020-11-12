@@ -18,13 +18,15 @@
         <!-- sidebar -->
         <div class="sidebar p-flex flex-col">
             <!-- user loged -->
-            <div class="userbox p-flex">
+            <div class="userbox p-flex space-between">
                <div class="user-info p-flex flex-centered">
                     <img v-bind:src="'./img/avatar' + user.avatar +'.jpg'" alt="avatar">
                     <p>{{user.name}}</p>
                </div>
-               <div class="user-opt">
-
+               <div class="user-opt p-flex flex-centered">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
                </div>
             </div>
             <!-- notifications -->

@@ -34,6 +34,10 @@ body {
     align-items: center;
 }
 
+.space-between {
+    justify-content: space-between;
+}
+
 .p-relative {
     position: relative;
 }
@@ -60,20 +64,36 @@ body {
 
 /* userbox */
 .sidebar .userbox {
-    height: 65px;
+    height: 70px;
     background-color: #ededed;
 }
 
 .sidebar .userbox img {
     height: 55px;
     border-radius: 100px;
+    margin-left: 10px;
 }
 
+.sidebar .userbox p {
+    font-weight: bold;
+}
 
+.sidebar .user-opt i {
+    color: #919191;
+    padding: 0px 10px;
+}
+
+.sidebar .user-opt i:last-child {
+    padding-right: 25px;
+}
+
+.sidebar .user-opt i:hover {
+    cursor: pointer;
+}
 
 /* notifiche */
 .sidebar .notifications {
-    height: 65px;
+    height: 70px;
     background-color: #9de1fe;
 }
 
