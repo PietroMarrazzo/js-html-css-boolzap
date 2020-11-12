@@ -21,7 +21,7 @@
             <div class="userbox p-flex space-between">
                <div class="user-info p-flex flex-centered">
                     <img v-bind:src="'./img/avatar' + user.avatar +'.jpg'" alt="avatar">
-                    <p>{{user.name}}</p>
+                    <p class="bold">{{user.name}}</p>
                </div>
                <div class="user-opt p-flex flex-centered">
                     <i class="fas fa-circle-notch"></i>
@@ -30,16 +30,26 @@
                </div>
             </div>
             <!-- notifications -->
-            <div class="notifications">
-                notifiche
+            <div class="notifications p-flex align-center">
+                <i class="fas fa-bell-slash"></i>
+                <div>
+                    <p class="bold">Ricevi notifiche dei tuoi messaggi</p>
+                    <p class="styled">Attiva notifiche desktop</p>
+                </div>
             </div>
             <!-- search bar -->
-            <div class="search-bar p-flex">
-                <input type="text" placeholder="cerca">
+            <div class="search-bar p-relative p-flex">
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <i class="fas fa-search p-absolute"></i>
             </div>
             <!-- contacts list -->
             <div class="contact-list">
-                lista contatti
+                <ul class="p-flex flex-col">
+                    <li v-for="friends in contacts" class="p-flex align-center">
+                        <img v-bind:src="'./img/avatar' + friends.avatar + '.jpg'" alt="">
+                        <p>{{friends.name}}</p>
+                    </li>
+                </ul>
             </div>
         </div>
 

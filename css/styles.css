@@ -34,10 +34,16 @@ body {
     align-items: center;
 }
 
+.align-center {
+    align-items: center;
+}
+
 .space-between {
     justify-content: space-between;
 }
 
+
+/* position uti */
 .p-relative {
     position: relative;
 }
@@ -46,6 +52,10 @@ body {
     position: absolute;
 }
 
+/* style uti */
+.bold {
+    font-weight: bold;
+}
 
 /* APP BOX */
 #app {
@@ -70,12 +80,12 @@ body {
 
 .sidebar .userbox img {
     height: 55px;
-    border-radius: 100px;
+    border-radius: 50%;
     margin-left: 10px;
 }
 
 .sidebar .userbox p {
-    font-weight: bold;
+    font-size: 15px;
 }
 
 .sidebar .user-opt i {
@@ -91,11 +101,36 @@ body {
     cursor: pointer;
 }
 
+
 /* notifiche */
 .sidebar .notifications {
     height: 70px;
     background-color: #9de1fe;
 }
+
+.sidebar .notifications i {
+    background-color: whitesmoke;
+    color: #90d6f2;
+    border-radius: 50%;
+    margin-left: 20px;
+    padding: 12px;
+    font-size: 25px;
+}
+
+.sidebar .notifications p {
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.sidebar .notifications p.styled {
+    opacity: .5;
+    text-decoration: underline;
+}
+
+.sidebar .notifications p.styled:hover {
+    cursor: pointer;
+}
+
 
 /* search */
 .sidebar .search-bar {
@@ -106,17 +141,31 @@ body {
 }
 
 .sidebar .search-bar input {
+    border: none;
     height: 30px;
     width: 97%;
-    border: none;
     background-color: #fafafa;
+    padding-left: 20%;
+    color: #919191;
+    font-family: sans-serif;
 }
+
+.sidebar .search-bar i {
+    left: 40px;
+    opacity: .7;
+    color: #919191;
+}
+
 
 /* contact list */
 .sidebar .contact-list {
     flex-grow: 1;
     overflow-y: auto;
     background-color: whitesmoke;
+}
+
+.sidebar .contact-list img {
+    height: 55px;
 }
 
 /* CHAT BOX */
