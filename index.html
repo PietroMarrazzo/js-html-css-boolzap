@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 
@@ -21,7 +21,7 @@
             <div class="userbox p-flex space-between">
                <div class="user-info p-flex flex-centered">
                     <img v-bind:src="'./img/avatar' + user.avatar +'.jpg'" alt="avatar">
-                    <p class="bold">{{user.name}}</p>
+                    <p class="medium">{{user.name}}</p>
                </div>
                <div class="user-opt p-flex flex-centered">
                     <i class="fas fa-circle-notch"></i>
@@ -33,7 +33,7 @@
             <div class="notifications p-flex align-center">
                 <i class="fas fa-bell-slash"></i>
                 <div>
-                    <p class="bold">Ricevi notifiche dei tuoi messaggi</p>
+                    <p class="medium">Ricevi notifiche dei tuoi messaggi</p>
                     <p class="styled">Attiva notifiche desktop</p>
                 </div>
             </div>
@@ -45,17 +45,31 @@
             <!-- contacts list -->
             <div class="contact-list">
                 <ul class="p-flex flex-col">
-                    <li v-for="friends in contacts" class="p-flex align-center">
+                    <li v-for="friends in contacts" class="contact p-flex align-center">
                         <img v-bind:src="'./img/avatar' + friends.avatar + '.jpg'" alt="">
-                        <p>{{friends.name}}</p>
+                        <p class="medium">{{friends.name}}</p>
                     </li>
                 </ul>
             </div>
         </div>
 
         <!-- chat box -->
-        <div>
-            chatbox
+        <div class="chat-container">
+            <!-- chat header -->
+            <div class="header-chat">
+                <div class="contact-selected p-flex flex-centered">
+                    <img v-bind:src="'./img/avatar' + user.avatar +'.jpg'" alt="avatar">
+                    <p class="medium">{{user.name}}</p>
+                </div>
+            </div>
+            <!-- mex box -->
+            <div class="main-chat">
+
+            </div>
+            <!-- footer chat -->
+            <div class="footer-chat">
+
+            </div>
         </div>
     </div>
 

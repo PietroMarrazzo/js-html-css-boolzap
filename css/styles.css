@@ -15,9 +15,12 @@ body {
         #d9dbd6 15%,
         #d9dbd6 100%
     );
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Yantramanav', sans-serif;
 }
 
+* p {
+    font-size: 16px;
+}
 
 /* UTILITIES */
 /* flex utilities */
@@ -54,7 +57,11 @@ body {
 
 /* style uti */
 .bold {
-    font-weight: bold;
+    font-weight: 700;
+}
+
+.medium {
+    font-weight: 500;
 }
 
 /* APP BOX */
@@ -85,7 +92,7 @@ body {
 }
 
 .sidebar .userbox p {
-    font-size: 15px;
+    /* font-size: 15px; */
 }
 
 .sidebar .user-opt i {
@@ -119,7 +126,7 @@ body {
 
 .sidebar .notifications p {
     padding-left: 10px;
-    font-size: 15px;
+    /* font-size: 15px; */
 }
 
 .sidebar .notifications p.styled {
@@ -144,10 +151,12 @@ body {
     border: none;
     height: 30px;
     width: 97%;
-    background-color: #fafafa;
+    background-color: white;
     padding-left: 20%;
     color: #919191;
-    font-family: sans-serif;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 12px;
+    opacity: .7;
 }
 
 .sidebar .search-bar i {
@@ -161,11 +170,23 @@ body {
 .sidebar .contact-list {
     flex-grow: 1;
     overflow-y: auto;
-    background-color: whitesmoke;
+    background-color: white;
+}
+
+.sidebar .contact-list .contact {
+    border-bottom: 1px solid rgb(246, 246, 246);
+    padding: 10px 0px;
+}
+
+.sidebar .contact-list .contact:last-child {
+    border: none;
 }
 
 .sidebar .contact-list img {
     height: 55px;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
 }
+
 
 /* CHAT BOX */
