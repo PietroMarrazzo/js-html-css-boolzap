@@ -6,7 +6,7 @@ var app = new Vue({
     data: {
         // nostro account
         user: {
-            name: 'Nome Utente',
+            name: 'Pietra Alfonsa',
             avatar: '_io'
         },
         // Elenco contatti

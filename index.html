@@ -4,19 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 
     <title>Boolzap by Pietro Marrazzo</title>
 </head>
 
-<body class="p-flex">
+<body class="p-flex flex-centered">
     <!-- app container -->
-    <div id="app" class="app-container">
+    <div id="app" class="app-container p-flex">
         <!-- sidebar -->
+        <div class="sidebar p-flex flex-col">
+            <!-- user loged -->
+            <div class="userbox p-flex">
+               <div class="user-info p-flex flex-centered">
+                   {{user.avatar}}
+                    <img src="./img/avatar'user.avatar'.jpg" alt="avatar">
+                    <p>{{user.name}}</p>
+               </div>
+               <div class="user-opt">
+
+               </div>
+            </div>
+            <!-- notifications -->
+            <div class="notifications">
+                notifiche
+            </div>
+            <!-- search bar -->
+            <div class="search-bar p-flex">
+                <input type="text" placeholder="cerca">
+            </div>
+            <!-- contacts list -->
+            <div class="contact-list">
+                lista contatti
+            </div>
+        </div>
 
         <!-- chat box -->
+        <div>
+            chatbox
+        </div>
     </div>
 
 

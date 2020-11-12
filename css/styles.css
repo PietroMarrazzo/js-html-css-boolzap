@@ -15,12 +15,23 @@ body {
         #d9dbd6 15%,
         #d9dbd6 100%
     );
+    font-family: 'Noto Sans', sans-serif;
 }
 
 
 /* UTILITIES */
+/* flex utilities */
 .p-flex {
     display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-centered {
+    justify-content: center;
+    align-items: center;
 }
 
 .p-relative {
@@ -31,10 +42,61 @@ body {
     position: absolute;
 }
 
-/* background */
 
-/* sidebar */
+/* APP BOX */
+#app {
+    background-color: whitesmoke;
+    height: 93%;
+    width: 80%;
+    min-width: 1024px;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+    background-color: lightgray;
+    flex-basis: 30%;
+}
+
+/* userbox */
+.sidebar .userbox {
+    height: 65px;
+    background-color: #ededed;
+}
+
+.sidebar .userbox img {
+    height: 55px;
+    border-radius: 100px;
+}
 
 
 
-/*  */
+/* notifiche */
+.sidebar .notifications {
+    height: 65px;
+    background-color: #9de1fe;
+}
+
+/* search */
+.sidebar .search-bar {
+    height: 50px;
+    background-color: #ededed;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .search-bar input {
+    height: 30px;
+    width: 97%;
+    border: none;
+    background-color: #fafafa;
+}
+
+/* contact list */
+.sidebar .contact-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: whitesmoke;
+}
+
+/* CHAT BOX */
