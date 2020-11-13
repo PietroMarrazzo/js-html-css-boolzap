@@ -276,7 +276,7 @@ body {
     border-radius: 12px;
 }
 
-.chat-container .main-chat .text-box.sent {
+.chat-container .main-chat .text-box.green {
     background-color: #dcf8c6;
 }
 

@@ -75,7 +75,17 @@
             </div>
             <!-- mex box -->
             <div class="main-chat">
-                <div class="text-line p-flex flex-end">
+                <!-- <div v-for="(contact) in contacts[indexChat].messages"></div>
+                   
+                </div> -->
+                <div v-for="(mex) in contacts[indexChat].messages" :class="['text-line p-flex', contacts[indexChat].status === 'sent' ? 'flex-end' : ''] ">
+                    <div :class="['text-box', contacts[indexChat].status === 'sent' ? 'green' : '']">
+                        {{mex.message}}
+                    </div>
+                    
+                </div>
+
+                <!-- <div class="text-line p-flex flex-end">
                     <div class="text-box sent">
                         <p>Ciao</p>
                         <p class="data p-flex flex-end">date</p>
@@ -86,7 +96,7 @@
                         <p>Ciao</p>
                         <p class="data p-flex flex-end">data</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- footer chat -->
             <div class="footer-chat p-flex space-around flex-centered">

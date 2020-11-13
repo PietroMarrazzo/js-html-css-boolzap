@@ -11,6 +11,7 @@ var app = new Vue({
         },
         // Elenco contatti
         indexChat: 0,
+        state: '',
         contacts: [
             {
                 name: 'Michele',
@@ -100,6 +101,13 @@ var app = new Vue({
     methods: {
         setChat(index) {
             this.indexChat = index;
+        },
+        setStatus() {
+            if (this.contacts[this.indexChat].status == 'sent') {
+                state = 'sent';
+            } else {
+                state = 'received';
+            }
         },
     }
 });
