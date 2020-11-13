@@ -107,8 +107,8 @@ body {
     margin-left: 10px;
 }
 
-.sidebar .userbox p {
-    /* font-size: 15px; */
+.sidebar .userbox .user-info p {
+    margin-left: 10px;
 }
 
 .sidebar .user-opt i {
@@ -274,6 +274,14 @@ body {
     background-color: white;
     margin: 12px 40px;
     border-radius: 12px;
+    box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.28);
+    -webkit-box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.28);
+    -moz-box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.28);
+}
+
+.chat-container .main-chat .text-box p {
+    font-size: 14px;
+    opacity: .6;
 }
 
 .chat-container .main-chat .text-box.green {
@@ -283,7 +291,7 @@ body {
 
 .chat-container .main-chat .text-box .data {
     font-size: 12px;
-    opacity: .7;
+    opacity: .4;
 }
 
 

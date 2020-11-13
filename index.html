@@ -80,7 +80,8 @@
                 </div> -->
                 <div v-for="(mex, index) in contacts[indexChat].messages" :class="['text-line p-flex', contacts[indexChat].messages[index].status ===  'sent' ? 'flex-end' : ''] ">
                     <div :class="['text-box', contacts[indexChat].messages[index].status === 'sent' ? 'green' : '']">
-                        {{mex.message}}
+                        <p>{{mex.message}}</p>
+                        <p class="data p-flex flex-end">{{mex.date}}</p>
                     </div>
                 </div>
 
