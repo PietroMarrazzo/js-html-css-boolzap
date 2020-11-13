@@ -10,6 +10,7 @@ var app = new Vue({
             avatar: '_io'
         },
         // Elenco contatti
+        indexChat: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -96,5 +97,9 @@ var app = new Vue({
             },
         ]
     },
-    methods: {}
+    methods: {
+        setChat(index) {
+            this.indexChat = index;
+        },
+    }
 });

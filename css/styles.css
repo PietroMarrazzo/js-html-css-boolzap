@@ -202,6 +202,11 @@ body {
     cursor: pointer;
 }
 
+.sidebar .contact-list .contact.active {
+    background-color: #b6b6b6;
+}
+
+
 .sidebar .contact-list .contact:last-child {
     border: none;
 }
@@ -263,16 +268,22 @@ body {
     padding-top: 40px;
 }
 
-/* .chat-container .main-chat .text-line {
-    justify-content: flex-end;
-} */
-
 .chat-container .main-chat .text-box {
-    padding: 25px;
+    padding: 10px;
     width: 35%;
     background-color: white;
     margin: 12px 40px;
     border-radius: 12px;
+}
+
+.chat-container .main-chat .text-box.sent {
+    background-color: #dcf8c6;
+}
+
+
+.chat-container .main-chat .text-box .data {
+    font-size: 12px;
+    opacity: .7;
 }
 
 
