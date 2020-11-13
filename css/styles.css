@@ -17,11 +17,11 @@ body {
         rgba(219,219,211,1) 40%,
         rgba(203,225,227,1) 100%
     );
-    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 * p {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* UTILITIES */
@@ -51,6 +51,13 @@ body {
     justify-content: space-around;
 }
 
+.flex-end {
+    justify-content: flex-end;
+}
+.flex-start {
+    justify-content: flex-start;
+}
+
 /* position uti */
 .p-relative {
     position: relative;
@@ -66,7 +73,7 @@ body {
 }
 
 .medium {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .opacity-04 {
@@ -253,7 +260,21 @@ body {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
     overflow-y: auto;
+    padding-top: 40px;
 }
+
+/* .chat-container .main-chat .text-line {
+    justify-content: flex-end;
+} */
+
+.chat-container .main-chat .text-box {
+    padding: 25px;
+    width: 35%;
+    background-color: white;
+    margin: 12px 40px;
+    border-radius: 12px;
+}
+
 
 /* footer chat */
 .chat-container .footer-chat {
