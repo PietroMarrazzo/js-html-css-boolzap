@@ -78,11 +78,10 @@
                 <!-- <div v-for="(contact) in contacts[indexChat].messages"></div>
                    
                 </div> -->
-                <div v-for="(mex) in contacts[indexChat].messages" :class="['text-line p-flex', contacts[indexChat].status === 'sent' ? 'flex-end' : ''] ">
-                    <div :class="['text-box', contacts[indexChat].status === 'sent' ? 'green' : '']">
+                <div v-for="(mex, index) in contacts[indexChat].messages" :class="['text-line p-flex', contacts[indexChat].messages[index].status ===  'sent' ? 'flex-end' : ''] ">
+                    <div :class="['text-box', contacts[indexChat].messages[index].status === 'sent' ? 'green' : '']">
                         {{mex.message}}
                     </div>
-                    
                 </div>
 
                 <!-- <div class="text-line p-flex flex-end">
