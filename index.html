@@ -60,13 +60,12 @@
             <div class="header-chat p-flex space-between">
                 <div class="active p-flex flex-centered">
                     <!-- da rendere switchabile con vue -->
-                    <img v-bind:src="'./img/avatar' + contacts.avatar{0} + '.jpg'" alt="avatar">
+                    <img v-bind:src="'./img/avatar' + contacts[indexChat].avatar + '.jpg'" alt="avatar">
                     <div>
-                        <p class="medium">Michele</p>
-                        <p class="medium opacity-04">Ultimo accesso oggi alle 11:05</p>
+                        <p class="medium">{{contacts[indexChat].name}}</p>
+                        <p class="medium opacity-04">Ultimo accesso oggi</p>
                     </div>
-                    <!-- <img v-bind:src="'./img/avatar' + user.avatar +'.jpg'" alt="avatar">
-                    <p class="medium">{{user.name}}</p> -->
+
                 </div>
                 <div class="chat-opt p-flex flex-centered">
                     <i class="fas fa-search"></i>
