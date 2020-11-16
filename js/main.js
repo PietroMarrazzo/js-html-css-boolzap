@@ -139,17 +139,17 @@ var app = new Vue({
                         },
                 );
                 this.newMessage = '';
-
+                const that = this;
                 // risposta
                 setTimeout(function(){ 
-                this.contacts[this.indexChat].messages.push(
-                    {
-                        date: dayjs().format('DD/MM/YYYY HH:mm'),
-                        message: 'Ok',
-                        status: 'received'
-                    },
-                )
-             }, 1500);
+                    that.contacts[that.indexChat].messages.push(
+                        {
+                            date: dayjs().format('DD/MM/YYYY HH:mm'),
+                            message: 'Ok',
+                            status: 'received'
+                        },
+                    )
+                }, 1500);
             }
         },
     }
