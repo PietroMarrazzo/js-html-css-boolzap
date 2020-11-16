@@ -130,14 +130,16 @@ var app = new Vue({
         },
 
         addMessage(index) {
-            if (this.newMessage.trim() != '') {
+            if (this.newMessage.trim() !== '') {
                 console.log(this.newMessage);
                 this.contacts[this.indexChat].messages.push({
-                    messages: {
+                    messages: [
+                        {
                         date: '',
                         message: this.newMessage,
                         status: 'sent'
-                    }
+                        }
+                    ],
                 });
                 this.newMessage = '';
             }

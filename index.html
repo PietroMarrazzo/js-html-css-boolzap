@@ -77,9 +77,6 @@
             </div>
             <!-- mex box -->
             <div class="main-chat">
-                <!-- <div v-for="(contact) in contacts[indexChat].messages"></div>
-                   
-                </div> -->
                 <div v-for="(mex, index) in contacts[indexChat].messages"
                     :class="['text-line p-flex', mex.status]">
                         <div class="text-box">
@@ -97,9 +94,6 @@
             </div>
         </div>
     </div>
-    <!-- v-for="(img, index) in contacts" :class="['fas fa-circle', index == indexChat ? 'active' : '']"
-    @click="setImg(index)" -->
-
 
     <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.6/dayjs.min.js" integrity="sha512-C2m821NxMpJ4Df47O4P/17VPqt0yiK10UmGl59/e5ynRRYiCSBvy0KHJjhp2XIjUJreuR+y3SIhVyiVilhCmcQ==" crossorigin="anonymous"></script>
