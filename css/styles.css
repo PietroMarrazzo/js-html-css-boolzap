@@ -284,6 +284,14 @@ body {
     opacity: .6;
 }
 
+.chat-container .main-chat .text-line.sent {
+    justify-content: flex-end;
+} 
+
+.chat-container .main-chat .text-line.sent .text-box {
+    background-color: #dcf8c6;
+} 
+
 .chat-container .main-chat .text-box.green {
     background-color: #dcf8c6;
 }

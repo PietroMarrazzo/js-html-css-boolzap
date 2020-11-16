@@ -45,10 +45,12 @@
             <!-- contacts list -->
             <div class="contact-list">
                 <ul class="p-flex flex-col">
-                    <li v-for="(friends, index) in contacts" :class="['contact p-flex align-center', index == indexChat ? 'active' : '']" @click="setChat(index)">
-                        <img v-bind:src="'./img/avatar' + friends.avatar + '.jpg'" alt="">
-                        <p class="medium">{{friends.name}}</p>
-                        <p></p>
+                    <li v-for="(friends, index) in contacts" 
+                        :class="['contact p-flex align-center', index == indexChat ? 'active' : '']"
+                        @click="setChat(index)">
+                            <img v-bind:src="'./img/avatar' + friends.avatar + '.jpg'" alt="">
+                            <p class="medium">{{friends.name}}</p>
+                            <p></p>
                     </li>
                 </ul>
             </div>
@@ -78,13 +80,14 @@
                 <!-- <div v-for="(contact) in contacts[indexChat].messages"></div>
                    
                 </div> -->
-                <div v-for="(mex, index) in contacts[indexChat].messages" :class="['text-line p-flex', contacts[indexChat].messages[index].status ===  'sent' ? 'flex-end' : ''] ">
-                    <div :class="['text-box', contacts[indexChat].messages[index].status === 'sent' ? 'green' : '']">
-                        <p>{{mex.message}}</p>
-                        <p class="data p-flex flex-end">{{mex.date}}</p>
-                    </div>
+                <div v-for="mex, index) in contacts[indexChat].messages"
+                    :class="['text-line p-flex', mex.status]">
+                        <div class="text-box">
+                            <p>{{mex.message}}</p>
+                            <p>{{mex.newMessage}}</p>
+                            <p class="data p-flex flex-end">{{mex.date}}</p>
+                        </div>
                 </div>
-
                 <!-- <div class="text-line p-flex flex-end">
                     <div class="text-box sent">
                         <p>Ciao</p>
@@ -101,7 +104,8 @@
             <!-- footer chat -->
             <div class="footer-chat p-flex space-around flex-centered">
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" placeholder="Scrivi un messaggio" 
+                     v-model="newMessage" v-on:keyup.enter="addMessage"> 
                 <i class="fas fa-microphone"></i>
             </div>
         </div>
@@ -111,5 +115,6 @@
 
 
     <script src="./js/main.js"></script>
+
 </body>
 </html>

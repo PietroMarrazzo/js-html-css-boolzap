@@ -33,6 +33,11 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
+                // answer: [ 
+                //     {
+                //     ok: 'ok',
+                //     }
+                // ],
             },
             {
                 name: 'Fabio',
@@ -55,6 +60,11 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
+                // answer: [ 
+                //     {
+                //     ok: 'ok',
+                //     }
+                // ],
             },
             {
                 name: 'Samuele',
@@ -77,6 +87,11 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
+                // answer: [ 
+                //     {
+                //     ok: 'ok',
+                //     }
+                // ],
             },
             {
                 name: 'Luisa',
@@ -94,19 +109,28 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
+                // answer: [ 
+                //     {
+                //     ok: 'ok',
+                //     }
+                // ],
             },
-        ]
+        ],
+        newMessage: '',
+        
     },
     methods: {
         setChat(index) {
             this.indexChat = index;
+            this.newMessage = '';
         },
-        // setStatus() {
-        //     if (this.contacts[this.indexChat].status == 'sent') {
-        //         state = 'sent';
-        //     } else {
-        //         state = 'received';
-        //     }
-        // },
+
+        addMessage(index) {
+            if (this.newMessage.trim() != '') {
+                    console.log(this.newMessage);
+                    this.contacts[index].messages.push(this.newMessage);
+                    this.newMessage = '';
+            }
+        }
     }
 });
