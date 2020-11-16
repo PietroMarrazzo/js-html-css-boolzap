@@ -80,26 +80,13 @@
                 <!-- <div v-for="(contact) in contacts[indexChat].messages"></div>
                    
                 </div> -->
-                <div v-for="mex, index) in contacts[indexChat].messages"
+                <div v-for="(mex, index) in contacts[indexChat].messages"
                     :class="['text-line p-flex', mex.status]">
                         <div class="text-box">
                             <p>{{mex.message}}</p>
-                            <p>{{mex.newMessage}}</p>
                             <p class="data p-flex flex-end">{{mex.date}}</p>
                         </div>
                 </div>
-                <!-- <div class="text-line p-flex flex-end">
-                    <div class="text-box sent">
-                        <p>Ciao</p>
-                        <p class="data p-flex flex-end">date</p>
-                    </div>
-                </div>
-                <div class="text-line p-flex flex-start">
-                    <div class="text-box">
-                        <p>Ciao</p>
-                        <p class="data p-flex flex-end">data</p>
-                    </div>
-                </div> -->
             </div>
             <!-- footer chat -->
             <div class="footer-chat p-flex space-around flex-centered">
@@ -115,6 +102,7 @@
 
 
     <script src="./js/main.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.6/dayjs.min.js" integrity="sha512-C2m821NxMpJ4Df47O4P/17VPqt0yiK10UmGl59/e5ynRRYiCSBvy0KHJjhp2XIjUJreuR+y3SIhVyiVilhCmcQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.6/locale/it.min.js" integrity="sha512-phkVsg58Vew4wUU/r26xmmcziH8AaEgdySp+pUdGUQerHGrK1jaqXCDI7/ezobI2jBqu6vMTV0CTwQrKNbEMNw==" crossorigin="anonymous"></script>
 </body>
 </html>

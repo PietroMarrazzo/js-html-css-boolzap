@@ -1,6 +1,9 @@
 /**
  * Boolzapp Vue
  */
+
+// data
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -9,6 +12,8 @@ var app = new Vue({
             name: 'Pietra Alfonsa',
             avatar: '_io'
         },
+        // const now = dayjs(),
+        // dayjs.locale(it),
         // Elenco contatti
         indexChat: 0,
         contacts: [
@@ -117,7 +122,6 @@ var app = new Vue({
             },
         ],
         newMessage: '',
-        
     },
     methods: {
         setChat(index) {
@@ -129,10 +133,10 @@ var app = new Vue({
             if (this.newMessage.trim() != '') {
                 console.log(this.newMessage);
                 this.contacts[this.indexChat].messages.push({
-                    message: {
-                        date: '00',
+                    messages: {
+                        date: '',
                         message: this.newMessage,
-                        status: 'sent',
+                        status: 'sent'
                     }
                 });
                 this.newMessage = '';
