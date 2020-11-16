@@ -3,7 +3,6 @@
  */
 
 // data
-
 var app = new Vue({
     el: '#app',
     data: {
@@ -133,13 +132,9 @@ var app = new Vue({
             if (this.newMessage.trim() !== '') {
                 console.log(this.newMessage);
                 this.contacts[this.indexChat].messages.push({
-                    messages: [
-                        {
-                        date: '',
+                        date: dayjs().format('DD/MM/YYYY HH:mm'),
                         message: this.newMessage,
                         status: 'sent'
-                        }
-                    ],
                 });
                 this.newMessage = '';
             }
