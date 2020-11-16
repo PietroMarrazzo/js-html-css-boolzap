@@ -130,14 +130,26 @@ var app = new Vue({
 
         addMessage(index) {
             if (this.newMessage.trim() !== '') {
-                console.log(this.newMessage);
-                this.contacts[this.indexChat].messages.push({
+                // console.log(this.newMessage);
+                this.contacts[this.indexChat].messages.push(
+                        {
                         date: dayjs().format('DD/MM/YYYY HH:mm'),
                         message: this.newMessage,
                         status: 'sent'
-                });
+                        },
+                );
                 this.newMessage = '';
             }
-        }
+            // risposta
+            setTimeout(function(){ 
+                this.contacts[this.indexChat].messages.push(
+                    {
+                        date: dayjs().format('DD/MM/YYYY HH:mm'),
+                        message: 'Ok',
+                        status: 'received'
+                    },
+                )
+             }, 1500);
+        },
     }
 });
