@@ -127,9 +127,9 @@ var app = new Vue({
 
         addMessage(index) {
             if (this.newMessage.trim() != '') {
-                    console.log(this.newMessage);
-                    this.contacts[index].messages.push(this.newMessage);
-                    this.newMessage = '';
+                console.log(this.newMessage);
+                this.contacts.messages.push(this.newMessage);
+                this.newMessage = '';
             }
         }
     }
