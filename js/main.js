@@ -139,9 +139,9 @@ var app = new Vue({
                         },
                 );
                 this.newMessage = '';
-            }
-            // risposta
-            setTimeout(function(){ 
+
+                // risposta
+                setTimeout(function(){ 
                 this.contacts[this.indexChat].messages.push(
                     {
                         date: dayjs().format('DD/MM/YYYY HH:mm'),
@@ -150,6 +150,7 @@ var app = new Vue({
                     },
                 )
              }, 1500);
+            }
         },
     }
 });
