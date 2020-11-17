@@ -137,7 +137,7 @@ var app = new Vue({
         // filter
         filter() {
             this.contacts.forEach((element) => {
-                if (! element.name.toLowerCase().includes(this.newFilter.toLowerCase())) {
+                if ( ! element.name.toLowerCase().includes(this.newFilter.toLowerCase())) {
                     element.visible = false;
                     console.log(element.visible);
                 }
