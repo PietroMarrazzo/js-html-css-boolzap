@@ -6,6 +6,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        newAccess: '',
         // nostro account
         user: {
             name: 'Pietra Alfonsa',
@@ -99,6 +100,7 @@ var app = new Vue({
         ],
         newMessage: '',
         newFilter: '',
+
     },
 
     methods: {
@@ -129,7 +131,9 @@ var app = new Vue({
                             message: 'Ok',
                             status: 'received'
                         },
-                    )
+                    );
+                    this.newAccess = this.contacts[this.indexChat].date;
+                    console.log(this.newAccess);
                 }, 1500);
             }
         },
@@ -141,9 +145,10 @@ var app = new Vue({
                     element.visible = false;
                     console.log(element.visible);
                 }
-                else (element.name.toLowerCase().includes(this.newFilter.toLowerCase()))
+                else {
                     element.visible = true;
                     console.log(element.visible);
+                }
             });
         }
     }

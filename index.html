@@ -38,15 +38,15 @@
                 </div>
             </div>
             <!-- search bar -->
-            <div class="search-bar p-relative p-flex" v-model="newFilter" v-on:keyup="filter()">
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+            <div class="search-bar p-relative p-flex">
+                <input v-model="newFilter" v-on:keyup="filter()" type="text" placeholder="Cerca o inizia una nuova chat">
                 <i class="fas fa-search p-absolute"></i>
             </div>
             <!-- contacts list -->
             <div class="contact-list">
                 <ul class="p-flex flex-col">
                     <li v-for="(friends, index) in contacts"
-                        v-show="friends.visible == true" 
+                        v-show="friends.visible" 
                         :class="['contact p-flex align-center', index == indexChat ? 'active' : '']"
                         @click="setChat(index)">
                             <img v-bind:src="'./img/avatar' + friends.avatar + '.jpg'" alt="">
@@ -66,7 +66,12 @@
                     <img v-bind:src="'./img/avatar' + contacts[indexChat].avatar + '.jpg'" alt="avatar">
                     <div>
                         <p class="medium">{{contacts[indexChat].name}}</p>
-                        <p class="medium opacity-04">Ultimo accesso oggi</p>
+                        <p v-if="newAccess == ''" class="medium opacity-04">
+                            Ultimo accesso effettuato ieri
+                        </p>
+                        <p v-else class="medium opacity-04">
+                           Ultimo accesso {{ newAccess }}
+                        </p>
                     </div>
 
                 </div>
