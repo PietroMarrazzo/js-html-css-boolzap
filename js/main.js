@@ -11,9 +11,6 @@ var app = new Vue({
             name: 'Pietra Alfonsa',
             avatar: '_io'
         },
-        // const now = dayjs(),
-        // dayjs.locale(it),
-        // Elenco contatti
         indexChat: 0,
         contacts: [
             {
@@ -37,11 +34,6 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
-                // answer: [ 
-                //     {
-                //     ok: 'ok',
-                //     }
-                // ],
             },
             {
                 name: 'Fabio',
@@ -64,11 +56,6 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
-                // answer: [ 
-                //     {
-                //     ok: 'ok',
-                //     }
-                // ],
             },
             {
                 name: 'Samuele',
@@ -91,11 +78,6 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
-                // answer: [ 
-                //     {
-                //     ok: 'ok',
-                //     }
-                // ],
             },
             {
                 name: 'Luisa',
@@ -113,21 +95,19 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
-                // answer: [ 
-                //     {
-                //     ok: 'ok',
-                //     }
-                // ],
             },
         ],
         newMessage: '',
+        newFilter: '',
     },
     methods: {
+        // set active chat
         setChat(index) {
             this.indexChat = index;
             this.newMessage = '';
         },
 
+        // chatting
         addMessage(index) {
             if (this.newMessage.trim() !== '') {
                 // console.log(this.newMessage);
@@ -141,8 +121,8 @@ var app = new Vue({
                 this.newMessage = '';
                 const that = this;
                 // risposta
-                setTimeout(function(){ 
-                    that.contacts[that.indexChat].messages.push(
+                setTimeout(() => { 
+                    this.contacts[this.indexChat].messages.push(
                         {
                             date: dayjs().format('DD/MM/YYYY HH:mm'),
                             message: 'Ok',
@@ -152,5 +132,14 @@ var app = new Vue({
                 }, 1500);
             }
         },
+
+        // filter
+        filter() {
+            this.contacts.forEach((element) => {
+                if (!this.contacts[element].name.includes(newFilter)) {
+                    this.contacts[element].visible = 'false';
+                }
+            });
+        }
     }
 });
