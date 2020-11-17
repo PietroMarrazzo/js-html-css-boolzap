@@ -38,7 +38,7 @@
                 </div>
             </div>
             <!-- search bar -->
-            <div class="search-bar p-relative p-flex" v-model="newFilter" v-on:keyup="filter">
+            <div class="search-bar p-relative p-flex" v-model="newFilter" v-on:keyup="filter(newFilter)">
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
                 <i class="fas fa-search p-absolute"></i>
             </div>
@@ -46,7 +46,7 @@
             <div class="contact-list">
                 <ul class="p-flex flex-col">
                     <li v-for="(friends, index) in contacts"
-                        v-show="!contacts.visible" 
+                        v-show="friends.visible == true" 
                         :class="['contact p-flex align-center', index == indexChat ? 'active' : '']"
                         @click="setChat(index)">
                             <img v-bind:src="'./img/avatar' + friends.avatar + '.jpg'" alt="">

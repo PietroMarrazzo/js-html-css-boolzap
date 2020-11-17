@@ -119,7 +119,7 @@ var app = new Vue({
                         },
                 );
                 this.newMessage = '';
-                const that = this;
+                // const that = this;
                 // risposta
                 setTimeout(() => { 
                     this.contacts[this.indexChat].messages.push(
@@ -134,10 +134,11 @@ var app = new Vue({
         },
 
         // filter
-        filter() {
+        filter(newFilter) {
+            // let compare = this.newFilter;
             this.contacts.forEach((element) => {
-                if (!this.contacts[element].name.includes(newFilter)) {
-                    this.contacts[element].visible = 'false';
+                if (!element.name.includes(newFilter)) {
+                    element.visible == 'false';
                 }
             });
         }
