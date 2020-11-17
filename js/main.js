@@ -138,7 +138,8 @@ var app = new Vue({
             // let compare = this.newFilter;
             this.contacts.forEach((element) => {
                 if (!element.name.includes(newFilter)) {
-                    element.visible == 'false';
+                    element.visible === 'false';
+                    console.log(element.visible);
                 }
             });
         }
