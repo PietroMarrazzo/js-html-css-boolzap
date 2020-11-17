@@ -100,6 +100,7 @@ var app = new Vue({
         newMessage: '',
         newFilter: '',
     },
+
     methods: {
         // set active chat
         setChat(index) {
@@ -134,13 +135,15 @@ var app = new Vue({
         },
 
         // filter
-        filter(newFilter) {
-            // let compare = this.newFilter;
+        filter() {
             this.contacts.forEach((element) => {
-                if (!element.name.includes(newFilter)) {
-                    element.visible === 'false';
+                if (! element.name.toLowerCase().includes(this.newFilter.toLowerCase())) {
+                    element.visible = false;
                     console.log(element.visible);
                 }
+                else (element.name.toLowerCase().includes(this.newFilter.toLowerCase()))
+                    element.visible = true;
+                    console.log(element.visible);
             });
         }
     }
