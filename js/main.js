@@ -132,7 +132,7 @@ var app = new Vue({
                             status: 'received'
                         },
                     );
-                    this.newAccess = this.contacts[this.indexChat].date;
+                    this.newAccess = dayjs().format('HH:mm DD/MM/YYYY');
                     console.log(this.newAccess);
                 }, 1500);
             }

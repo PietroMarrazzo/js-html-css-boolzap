@@ -98,6 +98,7 @@ body {
 /* userbox */
 .sidebar .userbox {
     height: 70px;
+    min-height: 70px;
     background-color: #ededed;
 }
 
@@ -232,6 +233,7 @@ body {
 
 .chat-container .header-chat {
     height: 70px;
+    min-height: 70px;
     background-color: #ededed;
     border-left: 1px solid rgb(200, 200, 200);
 }
